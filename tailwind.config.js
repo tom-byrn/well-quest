@@ -59,7 +59,7 @@ module.exports = {
           white: "#FFFFFF",
           lightGreen: "#D8EFD3",
           mediumGreen: "#95D2B3",
-          darkGreen: "#55AD9B",
+          darkGreen: "#4A9C8B",
           paleGreen: "#F1F8E8",
         },
       },
