@@ -4,10 +4,10 @@ import Link from "next/link"
 
 export default function Events() {
   const events = [
-    { id: 1, title: "Yoga Class", date: "2023-06-15", time: "17:00", organizer: "HR Department" },
-    { id: 2, title: "Group Hike", date: "2023-06-17", time: "09:00", organizer: "John Doe" },
-    { id: 3, title: "Meditation Session", date: "2023-06-19", time: "12:00", organizer: "Wellness Committee" },
-    { id: 4, title: "5K Run", date: "2023-06-22", time: "18:00", organizer: "Running Club" },
+    { id: 1, title: "Yoga Class", date: "15/06/2025", time: "17:00", organizer: "HR Department", location: "Gym" },
+    { id: 2, title: "Group Hike", date: "17/07/2025", time: "09:00", organizer: "Tom Byrne", location: "Croagh Patrick" },
+    { id: 3, title: "Meditation Session", date: "01/08/2025", time: "12:00", organizer: "Wellness Committee", location: "Floor 3 quiet room" },
+    { id: 4, title: "5K Run", date: "03/08/2025", time: "18:00", organizer: "Running Club", location: "City square" },
   ]
 
   return (
@@ -27,6 +27,7 @@ export default function Events() {
               <p>Date: {event.date}</p>
               <p>Time: {event.time}</p>
               <p>Organizer: {event.organizer}</p>
+              <p>Location: {event.location}</p>
               <Button asChild className="mt-4">
                 <Link href={`/events/${event.id}`}>View Details</Link>
               </Button>
