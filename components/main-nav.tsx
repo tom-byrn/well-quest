@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { Home, Calendar, Activity, User } from 'lucide-react'
+import { Home, Calendar, Activity, User, Trophy } from 'lucide-react'
+import Leaderboard from '@/app/leaderboard/page';
 
 export function MainNav() {
   return (
@@ -11,6 +12,7 @@ export function MainNav() {
         <NavItem href="/" icon={<Home className="mr-2 h-4 w-4" />}>Dashboard</NavItem>
         <NavItem href="/events" icon={<Calendar className="mr-2 h-4 w-4" />}>Events</NavItem>
         <NavItem href="/wellness" icon={<Activity className="mr-2 h-4 w-4" />}>Wellness Tracker</NavItem>
+        <NavItem href="/leaderboard" icon={<Trophy className="mr-2 h-4 w-4" />}>Leaderboard</NavItem>
         <NavItem href="/profile" icon={<User className="mr-2 h-4 w-4" />}>Profile</NavItem>
       </ul>
     </nav>
