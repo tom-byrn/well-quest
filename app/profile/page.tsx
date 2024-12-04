@@ -1,36 +1,41 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Label } from "@/components/ui/label";
 
 export default function Profile() {
+  // Example user information (this can come from props, context, or API in real implementation)
+  const userInfo = {
+    name: "David Moore",
+    email: "david.moore@amphibian.ie",
+    department: "Software Development",
+  };
+
   return (
     <div className="space-y-6">
       <h1 className="text-3xl font-bold">Your Profile</h1>
-      
+
       <Card>
         <CardHeader>
           <CardTitle>Personal Information</CardTitle>
         </CardHeader>
         <CardContent>
-          <form className="space-y-4">
+          <div className="space-y-4">
             <div className="grid w-full items-center gap-1.5">
-              <Label htmlFor="name">Name</Label>
-              <Input type="text" id="name" placeholder="John Doe" />
+              <Label>Name</Label>
+              <p className="text-lg font-semibold">{userInfo.name}</p>
             </div>
             <div className="grid w-full items-center gap-1.5">
-              <Label htmlFor="email">Email</Label>
-              <Input type="email" id="email" placeholder="john.doe@example.com" />
+              <Label>Email</Label>
+              <p className="text-lg font-semibold">{userInfo.email}</p>
             </div>
             <div className="grid w-full items-center gap-1.5">
-              <Label htmlFor="department">Department</Label>
-              <Input type="text" id="department" placeholder="Marketing" />
+              <Label>Department</Label>
+              <p className="text-lg font-semibold">{userInfo.department}</p>
             </div>
-            <Button type="submit">Update Profile</Button>
-          </form>
+          </div>
         </CardContent>
       </Card>
-      
+
       <Card>
         <CardHeader>
           <CardTitle>Notification Preferences</CardTitle>
@@ -54,6 +59,5 @@ export default function Profile() {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }
-
